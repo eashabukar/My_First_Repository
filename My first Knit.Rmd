@@ -1,0 +1,27 @@
+---
+title: "My_First_Repository"
+author: "ama"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r message=F, warning=F}
+
+library(tidyverse)
+
+quant_data <- rnorm(10, 0, 1)
+qual_data <- c("Of", "All", "The", "Souls", "I", "Have", "Encountered", "In", "My", "Travels")
+
+df <- tibble::as_tibble(cbind(quant_data, qual_data)) %>%
+  mutate(quant_data = as.numeric(paste0(quant_data, sep = "")))
+
+glimpse(df)
+
+
+
+```
+
+
+
+
+
